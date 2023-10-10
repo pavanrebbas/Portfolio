@@ -1,0 +1,65 @@
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.nav-bar {
+    background-color: #fff;
+    box-shadow: 0px 2px 7px 0px rgb(218, 214, 214);
+}
+
+.background-image {
+
+    background-image: url("https://www.niit.com/india/sites/default/files/2023-04/Product-Banner_Data-Analyst_0.jpg");
+    height: 100vh;
+    background-repeat: no-repeat;
+    /* background-size: cover; */
+    background-attachment: fixed;
+}
+
+/* THIS IS LINE IS PARENT DIV LO UNNA  CHILD'S LIKE H1,H1,P ANY ELA PARENET DIV ECHI (>)E SYMOBOL ESTHE VATILO UNNA CHILD'S KI APPLY AVTHINDHI*/
+.background-text>h4 {
+    margin-top: 200px;
+}
+
+.background-text>h1 {
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.background-text>h5 {
+    font-size: 30px;
+}
+
+
+.about {
+    background-color: #f3f8ff;
+}
+
+.title::after {
+    content: "—Who I Am ?—";
+}
+
+.skills::after {
+    content: "—What I Know ?—";
+}
+
+.contact::after {
+    content: "—Get In Touch—";
+}
+
+.project::after {
+    content: "—My Works—";
+}
+
+.contact-us {
+    background-color: #f3f8ff;
+}
+
+.card:hover {
+    background-color: #bdd3fa;
+    color: #fafafa;
+    cursor: pointer;
+    border: none;
+    transition: all 500ms ease-in-out;
+}
