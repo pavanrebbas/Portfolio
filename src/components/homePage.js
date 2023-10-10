@@ -39,6 +39,7 @@ const Home = () => {
                             <h4 className="text-light">Hello, This is</h4> <br />
                             <h1 className="text-light">Rebbas Pavan kumar</h1> <br />
                             <h5 className="text-light">And I'm a Frontend Developer|</h5>
+                            <h5 className="text-light">And I'm a Frontend Developer|</h5>
                         </Col>
                     </Row>
                 </Container>
