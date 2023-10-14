@@ -56,7 +56,7 @@
     background-color: #f3f8ff;
 }
 
-.card:hover {
+.card-1:hover {
     background-color: #bdd3fa;
     color: #fafafa;
     cursor: pointer;

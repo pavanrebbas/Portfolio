@@ -29,6 +29,39 @@ const Home = () => {
         console.log(data)
     }
 
+
+    // MY SKILLS ARRAY AND OBJECTS
+    const myskills = [
+        {
+            name: "HTML-5"
+        },
+        {
+            name: "CSS-3"
+        },
+        {
+            name: "Bootstarp"
+        },
+        {
+            name: "Javascript"
+        },
+        {
+            name: "React Js"
+        },
+        {
+            name: "Redux"
+        },
+        {
+            name: "Github"
+        },
+
+
+
+
+
+
+
+    ]
+
     return (
 
         <Fragment>
@@ -38,7 +71,6 @@ const Home = () => {
                         <Col className="background-text" xs={12} md={12}>
                             <h4 className="text-light">Hello, This is</h4> <br />
                             <h1 className="text-light">Rebbas Pavan kumar</h1> <br />
-                            <h5 className="text-light">And I'm a Frontend Developer|</h5>
                             <h5 className="text-light">And I'm a Frontend Developer|</h5>
                         </Col>
                     </Row>
@@ -65,94 +97,22 @@ const Home = () => {
             </div>
 
             {/******************** MY SKILLS ********************/}
-            <Container className="my-5 py-3">
+            <Container className="my-5 py-3 myskills-container">
                 <h1 className="text-center  my-5">My Skills  <p className="skills py-2" style={{ fontSize: "15px" }}></p></h1>
                 <Row className="text-center all" >
-                    <Col xs={6} md={4} className="my-3">
-                        {/* <div> <span>HTML-5</span> <ProgressBar striped variant="success" className="my-3" now={90} /></div>
-                            <div> <span>CSS-3</span> <ProgressBar striped variant="info" className="my-3" now={80} /></div>
-                            <div> <span>Bootstrap</span> <ProgressBar striped variant="warning" className="my-3" now={85} /></div>
-                            <div> <span>Javascript</span> <ProgressBar striped variant="danger" className="my-3" now={75} /></div>
-                            <div> <span>React Js</span> <ProgressBar striped variant="primary" className="my-3" now={80} /></div>
-                            <div> <span>Redux</span> <ProgressBar striped variant="secondary" className="my-3" now={60} /></div>
-                            <div> <span>Github</span> <ProgressBar striped variant="terinary" className="my-3" now={50} /></div> */}
-                        {/* <h1>Html-5</h1>
-                            <h1>Css-3</h1>
-                            <h1>Bootstrap</h1>
-                            <h1>Javascript</h1>
-                            <h1>React Js</h1>
-                            <h1>Redux</h1>
-                            <h1>Github</h1> */}
-                        <Card className="card">
-                            <CardBody>
-                                <CardTitle>
-                                    <h3>HTML-5</h3>
-                                </CardTitle>
-                            </CardBody>
-                        </Card>
-                    </Col>
-
-                    <Col xs={6} md={4} className="my-3">
-                        <Card>
-                            <CardBody>
-                                <CardTitle>
-                                    <h3>CSS-3</h3>
-                                </CardTitle>
-                            </CardBody>
-                        </Card>
-                    </Col>
-
-                    <Col xs={6} md={4} className="my-3">
-                        <Card>
-                            <CardBody>
-                                <CardTitle>
-                                    <h3>Javascript</h3>
-                                </CardTitle>
-                            </CardBody>
-                        </Card>
-                    </Col>
-
-
-                    <Col xs={6} md={4} className="my-3">
-                        <Card>
-                            <CardBody>
-                                <CardTitle>
-                                    <h3>Bootstrap</h3>
-                                </CardTitle>
-                            </CardBody>
-                        </Card>
-                    </Col>
-
-
-                    <Col xs={6} md={4} className="my-3">
-                        <Card>
-                            <CardBody>
-                                <CardTitle>
-                                    <h3>React Js</h3>
-                                </CardTitle>
-                            </CardBody>
-                        </Card>
-                    </Col>
-
-                    <Col xs={6} md={4} className="my-3">
-                        <Card>
-                            <CardBody>
-                                <CardTitle>
-                                    <h3>Redux</h3>
-                                </CardTitle>
-                            </CardBody>
-                        </Card>
-                    </Col>
-
-                    <Col xs={6} md={4} className="my-3">
-                        <Card>
-                            <CardBody>
-                                <CardTitle>
-                                    <h3>Github</h3>
-                                </CardTitle>
-                            </CardBody>
-                        </Card>
-                    </Col>
+                    {
+                        myskills.map((skill) => (
+                            < Col xs={6} md={4} className="my-3">
+                                <Card className="card-1">
+                                    <CardBody>
+                                        <CardTitle>
+                                            <h3>{skill.name}</h3>
+                                        </CardTitle>
+                                    </CardBody>
+                                </Card>
+                            </Col>
+                        ))
+                    }
                 </Row>
             </Container>
 
@@ -193,7 +153,7 @@ const Home = () => {
                     </Row>
                 </Container>
             </div>
-        </Fragment>
+        </Fragment >
     )
 };
 

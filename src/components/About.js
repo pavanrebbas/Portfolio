@@ -1,7 +1,32 @@
 import { Fragment } from "react"
-import { Container, Row, Col, Image,ProgressBar } from "react-bootstrap"
+import { Container, Row, Col, Image, Card, CardBody, CardImg } from "react-bootstrap"
 
 const About = () => {
+
+    // MYSKILLS ARRAY AND OBJECTS
+    const myskills = [
+        {
+            name: "HTML-5"
+        },
+        {
+            name: "CSS-3"
+        },
+        {
+            name: "Bootstarp"
+        },
+        {
+            name: "Javascript"
+        },
+        {
+            name: "React Js"
+        },
+        {
+            name: "Redux"
+        },
+        {
+            name: "Github"
+        },
+    ]
 
     return (
 
@@ -23,29 +48,23 @@ const About = () => {
                     </Row>
                 </Container>
 
-
-
-
+                {/***************** MY SKILLS *****************/}
                 <Container className="my-5 py-3">
                     <h1 className="text-center  my-5">My Skills  <p className="skills py-2" style={{ fontSize: "15px" }}></p></h1>
                     <Row>
-                        <Col xs={12} md={6} className="offset-md-3">
-
-                            <div> <span>HTML-5</span> <ProgressBar striped variant="success" className="my-3" now={90} /></div>
-                            <div> <span>CSS-3</span> <ProgressBar striped variant="info" className="my-3" now={80} /></div>
-                            <div> <span>Bootstrap</span> <ProgressBar striped variant="warning" className="my-3" now={85} /></div>
-                            <div> <span>Javascript</span> <ProgressBar striped variant="danger" className="my-3" now={75} /></div>
-                            <div> <span>React Js</span> <ProgressBar striped variant="primary" className="my-3" now={80} /></div>
-                            <div> <span>Redux</span> <ProgressBar striped variant="secondary" className="my-3" now={60} /></div>
-                            <div> <span>Github</span> <ProgressBar striped variant="terinary" className="my-3" now={50} /></div>
-                            {/* <h1>Html-5</h1>
-                            <h1>Css-3</h1>
-                            <h1>Bootstrap</h1>
-                            <h1>Javascript</h1>
-                            <h1>React Js</h1>
-                            <h1>Redux</h1>
-                            <h1>Github</h1> */}
-                        </Col>
+                        {
+                            myskills.map((skill) => {
+                                return (
+                                    <Col xs={6} md={4} className="my-3 text-center">
+                                        <Card className="card-1">
+                                            <CardBody>
+                                                <h3>{skill.name}</h3>
+                                            </CardBody>
+                                        </Card>
+                                    </Col>
+                                )
+                            })
+                        }
                     </Row>
                 </Container>
 
